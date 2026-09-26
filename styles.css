@@ -1,5 +1,18 @@
 body {
-    background-color: #f5f1eb;
-    color: #333333;
-    font-family: Arial, sans-serif;
+    background-color: #F3EBDD;
+    color: #3F3A36;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+section {
+    padding: 40px;
+    margin: 30px auto;
+    max-width: 1000px;
+    border-radius: 12px;
 }

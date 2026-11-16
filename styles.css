@@ -1,12 +1,23 @@
 
+/* MAIN WEBSITE STYLE */
+
+:root {
+    --ivory: #F5F0E6;
+    --sage: #A7B89C;
+    --rose: #D9A7A7;
+    --sandstone: #D2B48C;
+    --blue: #6D8CA6;
+    --text: #3F3A36;
+}
+
 body {
-    background-color: #F5F0E6;
-    color: #3F3A36;
+    background-color: var(--ivory);
+    color: var(--text);
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     line-height: 1.6;
     margin: 0;
-    padding: 30px;
+    padding: 0;
 }
 
 h1, h2, h3 {
@@ -17,29 +28,159 @@ h1 {
     margin-bottom: 20px;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-    padding: 15px;
-    border: 2px solid #A7B89C;
-    border-radius: 12px;
-}
-
 p {
     margin: 20px 0;
     max-width: 1000px;
 }
 
-img {
-    max-width: 100%;
-    margin: 20px 0;
-    border-radius: 12px;
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: var(--ivory);
+    border-bottom: 2px solid var(--sage);
 }
 
-/* Movies page layout */
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* HOMEPAGE */
+
+.home-page {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* INTRODUCTION */
+
+.home-hero {
+    background-color: var(--rose);
+    padding: 85px 10%;
+    text-align: center;
+}
+
+.hero-text {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.home-hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    margin: 10px 0 25px;
+}
+
+.home-hero h2 {
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.home-hero p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+/* FEATURE SECTIONS */
+
+.home-feature {
+    padding: 75px 8%;
+}
+
+.home-feature h2 {
+    font-size: 34px;
+    margin-top: 5px;
+}
+
+/* THE LAST OF US */
+
+.tlou-section {
+    background-color: var(--ivory);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.feature-text p {
+    max-width: 600px;
+}
+
+.feature-image {
+    background-color: var(--sage);
+    padding: 25px;
+}
+
+.feature-image img,
+.re-image img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 0;
+}
+
+/* RESIDENT EVIL */
+
+.re-section {
+    background-color: var(--blue);
+    color: white;
+}
+
+.re-heading {
+    max-width: 750px;
+    margin-bottom: 35px;
+}
+
+.re-content {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.re-image {
+    background-color: var(--sandstone);
+    padding: 22px;
+    color: var(--text);
+}
+
+.re-image img {
+    height: 380px;
+}
+
+.re-text p {
+    max-width: 600px;
+}
+
+/* CLOSING SECTION */
+
+.home-ending {
+    background-color: var(--sandstone);
+    text-align: center;
+    padding: 65px 10%;
+}
+
+.home-ending h2 {
+    font-size: 30px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* MOVIES PAGE */
 
 .movies-page {
     max-width: 1100px;
@@ -52,8 +193,8 @@ img {
 
 .movie-section {
     margin-bottom: 60px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #A7B89C;
+    padding: 35px;
+    border-bottom: none;
 }
 
 .movie-section h2 {
@@ -65,7 +206,17 @@ img {
     margin-bottom: 10px;
 }
 
-/* Photo galleries using CSS Grid */
+/* MOVIE COLOR SECTIONS */
+
+.movie-section:nth-of-type(even) {
+    background-color: var(--sage);
+}
+
+.movie-section:nth-of-type(odd) {
+    background-color: var(--ivory);
+}
+
+/* MOVIE PHOTO GALLERIES */
 
 .movie-gallery {
     display: grid;
@@ -83,10 +234,10 @@ img {
     height: 300px;
     object-fit: cover;
     margin: 0;
-    border-radius: 12px;
+    border-radius: 0;
 }
 
-/* Larger individual movie images */
+/* FEATURED MOVIE IMAGES */
 
 .featured-movie-image {
     max-width: 850px;
@@ -102,19 +253,19 @@ img {
     max-height: 450px;
     object-fit: cover;
     margin: 0;
-    border-radius: 12px;
+    border-radius: 0;
 }
 
-/* Image captions */
+/* IMAGE CAPTIONS */
 
 figcaption {
     font-size: 13px;
     line-height: 1.5;
     margin-top: 8px;
-    color: #6B625B;
+    color: var(--text);
 }
 
-/* Responsive YouTube video */
+/* YOUTUBE VIDEO */
 
 .video-container {
     position: relative;
@@ -128,21 +279,36 @@ figcaption {
     width: 100%;
     height: 100%;
     border: 0;
-    border-radius: 12px;
 }
 
-/* Mobile layout */
+/* MOBILE LAYOUT */
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
-    body {
-        padding: 15px;
+    .home-hero {
+        padding: 55px 25px;
     }
 
-    nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+    .home-feature {
+        padding: 45px 25px;
+    }
+
+    .tlou-section,
+    .re-content {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-image img,
+    .re-image img {
+        height: auto;
+    }
+
+    .home-feature h2 {
+        font-size: 28px;
+    }
+
+    .home-ending {
+        padding: 45px 25px;
     }
 
     .movie-gallery {
@@ -158,8 +324,11 @@ figcaption {
     }
 
     .movie-section {
-        margin-bottom: 45px;
-        padding-bottom: 25px;
+        margin-bottom: 35px;
+        padding: 25px;
     }
 
+    nav {
+        gap: 15px;
+    }
 }

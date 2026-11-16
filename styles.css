@@ -1,5 +1,10 @@
 
-/* MAIN WEBSITE STYLE */
+/* ========================================
+   THE ART BEHIND THE EXPERIENCE
+   MAIN WEBSITE STYLES
+======================================== */
+
+/* COLOR PALETTE */
 
 :root {
     --ivory: #F5F0E6;
@@ -8,6 +13,16 @@
     --sandstone: #D2B48C;
     --blue: #6D8CA6;
     --text: #3F3A36;
+    --muted-text: #6B625B;
+}
+
+
+/* ========================================
+   GENERAL WEBSITE STYLING
+======================================== */
+
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -20,8 +35,11 @@ body {
     padding: 0;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Playfair Display', serif;
+    color: inherit;
 }
 
 h1 {
@@ -33,11 +51,20 @@ p {
     max-width: 1000px;
 }
 
-/* NAVIGATION */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
 
 nav {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 30px;
     flex-wrap: wrap;
     padding: 20px;
@@ -50,299 +77,28 @@ nav a {
     text-decoration: none;
     font-size: 14px;
     letter-spacing: 1px;
+    transition: color 0.2s ease;
 }
 
-/* HOMEPAGE */
+nav a:hover {
+    color: var(--blue);
+}
+
+
+/* ========================================
+   HOMEPAGE
+======================================== */
 
 .home-page {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* INTRODUCTION */
+
+/* MAGAZINE COVER / INTRODUCTION */
 
 .home-hero {
     background-color: var(--rose);
-    padding: 85px 10%;
-    text-align: center;
-}
-
-.hero-text {
-    max-width: 750px;
-    margin: 0 auto;
-}
-
-.home-hero h1 {
-    font-size: clamp(38px, 6vw, 65px);
-    margin: 10px 0 25px;
-}
-
-.home-hero h2 {
-    font-size: 23px;
-    font-weight: 500;
-}
-
-.home-hero p {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.eyebrow {
-    font-size: 11px;
-    letter-spacing: 3px;
-    font-weight: 600;
-}
-
-/* FEATURE SECTIONS */
-
-.home-feature {
-    padding: 75px 8%;
-}
-
-.home-feature h2 {
-    font-size: 34px;
-    margin-top: 5px;
-}
-
-/* THE LAST OF US */
-
-.tlou-section {
-    background-color: var(--ivory);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 55px;
-    align-items: center;
-}
-
-.feature-text p {
-    max-width: 600px;
-}
-
-.feature-image {
-    background-color: var(--sage);
-    padding: 25px;
-}
-
-.feature-image img,
-.re-image img {
-    display: block;
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    margin: 0;
-    border-radius: 0;
-}
-
-/* RESIDENT EVIL */
-
-.re-section {
-    background-color: var(--blue);
-    color: white;
-}
-
-.re-heading {
-    max-width: 750px;
-    margin-bottom: 35px;
-}
-
-.re-content {
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    gap: 50px;
-    align-items: center;
-}
-
-.re-image {
-    background-color: var(--sandstone);
-    padding: 22px;
-    color: var(--text);
-}
-
-.re-image img {
-    height: 380px;
-}
-
-.re-text p {
-    max-width: 600px;
-}
-
-/* CLOSING SECTION */
-
-.home-ending {
-    background-color: var(--sandstone);
-    text-align: center;
-    padding: 65px 10%;
-}
-
-.home-ending h2 {
-    font-size: 30px;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-/* MOVIES PAGE */
-
-.movies-page {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.movies-intro {
-    margin-bottom: 50px;
-}
-
-.movie-section {
-    margin-bottom: 60px;
-    padding: 35px;
-    border-bottom: none;
-}
-
-.movie-section h2 {
-    margin-bottom: 15px;
-}
-
-.movie-section h3 {
-    margin-top: 30px;
-    margin-bottom: 10px;
-}
-
-/* MOVIE COLOR SECTIONS */
-
-.movie-section:nth-of-type(even) {
-    background-color: var(--sage);
-}
-
-.movie-section:nth-of-type(odd) {
-    background-color: var(--ivory);
-}
-
-/* MOVIE PHOTO GALLERIES */
-
-.movie-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-    margin: 25px 0;
-}
-
-.movie-gallery figure {
-    margin: 0;
-}
-
-.movie-gallery img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    margin: 0;
-    border-radius: 0;
-}
-
-/* FEATURED MOVIE IMAGES */
-
-.featured-movie-image {
-    max-width: 850px;
-    margin: 30px auto;
-}
-
-.featured-movie-image figure {
-    margin: 0;
-}
-
-.featured-movie-image img {
-    width: 100%;
-    max-height: 450px;
-    object-fit: cover;
-    margin: 0;
-    border-radius: 0;
-}
-
-/* IMAGE CAPTIONS */
-
-figcaption {
-    font-size: 13px;
-    line-height: 1.5;
-    margin-top: 8px;
-    color: var(--text);
-}
-
-/* YOUTUBE VIDEO */
-
-.video-container {
-    position: relative;
-    width: 100%;
-    max-width: 700px;
-    aspect-ratio: 16 / 9;
-    margin: 20px 0;
-}
-
-.video-container iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-/* MOBILE LAYOUT */
-
-@media (max-width: 700px) {
-
-    .home-hero {
-        padding: 55px 25px;
-    }
-
-    .home-feature {
-        padding: 45px 25px;
-    }
-
-    .tlou-section,
-    .re-content {
-        grid-template-columns: 1fr;
-    }
-
-    .feature-image img,
-    .re-image img {
-        height: auto;
-    }
-
-    .home-feature h2 {
-        font-size: 28px;
-    }
-
-    .home-ending {
-        padding: 45px 25px;
-    }
-
-    .movie-gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .movie-gallery img {
-        height: auto;
-    }
-
-    .featured-movie-image img {
-        height: auto;
-    }
-
-    .movie-section {
-        margin-bottom: 35px;
-        padding: 25px;
-    }
-
-    nav {
-        gap: 15px;
-    }
-}
-/* HOMEPAGE MAGAZINE DESIGN */
-
-.home-page {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* INTRODUCTION / COVER */
-
-.home-hero {
-    background-color: #D9A7A7;
     padding: 35px 8% 55px;
 }
 
@@ -390,14 +146,15 @@ figcaption {
     text-align: right;
 }
 
-/* EDITORIAL INTRODUCTION */
+
+/* WHY VISUAL DESIGN MATTERS */
 
 .intro-section {
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;
     gap: 70px;
     padding: 85px 9%;
-    background-color: #F5F0E6;
+    background-color: var(--ivory);
 }
 
 .intro-heading h2,
@@ -412,6 +169,7 @@ figcaption {
     margin-bottom: 25px;
 }
 
+
 /* SMALL SECTION LABELS */
 
 .eyebrow {
@@ -420,10 +178,11 @@ figcaption {
     letter-spacing: 2px;
 }
 
-/* COLOR BLOCK SECTION */
+
+/* VISUAL ELEMENTS / COLOR BLOCKS */
 
 .visual-elements {
-    background-color: #F5F0E6;
+    background-color: var(--ivory);
     padding: 55px 8% 85px;
 }
 
@@ -433,7 +192,7 @@ figcaption {
 
 .element-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 0;
 }
 
@@ -461,31 +220,32 @@ figcaption {
 }
 
 .color-block-sage {
-    background-color: #A7B89C;
+    background-color: var(--sage);
     color: #FFFFFF;
 }
 
 .color-block-blue {
-    background-color: #6D8CA6;
+    background-color: var(--blue);
     color: #FFFFFF;
 }
 
 .color-block-rose {
-    background-color: #D9A7A7;
-    color: #3F3A36;
+    background-color: var(--rose);
+    color: var(--text);
 }
 
 .color-block-sand {
-    background-color: #D2B48C;
-    color: #3F3A36;
+    background-color: var(--sandstone);
+    color: var(--text);
 }
 
-/* EXPLORATION SECTION */
+
+/* WHAT THE WEBSITE EXPLORES */
 
 .explore-section {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
-    background-color: #A7B89C;
+    background-color: var(--sage);
     align-items: stretch;
 }
 
@@ -494,7 +254,7 @@ figcaption {
 }
 
 .explore-accent {
-    background-color: #6D8CA6;
+    background-color: var(--blue);
     color: #FFFFFF;
     padding: 45px 30px;
     display: flex;
@@ -509,10 +269,11 @@ figcaption {
     letter-spacing: 2px;
 }
 
-/* CLOSING BLOCK */
+
+/* HOMEPAGE CLOSING */
 
 .home-ending {
-    background-color: #D2B48C;
+    background-color: var(--sandstone);
     text-align: center;
     padding: 65px 10%;
 }
@@ -523,9 +284,136 @@ figcaption {
     margin: 0 auto;
 }
 
-/* MOBILE */
+
+/* ========================================
+   MOVIES PAGE
+======================================== */
+
+.movies-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.movies-intro {
+    margin-bottom: 50px;
+}
+
+.movie-section {
+    margin-bottom: 60px;
+    padding: 35px;
+}
+
+.movie-section h2 {
+    margin-bottom: 15px;
+}
+
+.movie-section h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+
+/* MOVIE COLOR SECTIONS */
+
+.movie-section:nth-of-type(even) {
+    background-color: var(--sage);
+}
+
+.movie-section:nth-of-type(odd) {
+    background-color: var(--ivory);
+}
+
+
+/* MOVIE PHOTO GALLERIES */
+
+.movie-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.movie-gallery figure {
+    margin: 0;
+}
+
+.movie-gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 0;
+}
+
+
+/* FEATURED MOVIE IMAGES */
+
+.featured-movie-image {
+    max-width: 850px;
+    margin: 30px auto;
+}
+
+.featured-movie-image figure {
+    margin: 0;
+}
+
+.featured-movie-image img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 0;
+}
+
+
+/* IMAGE CAPTIONS */
+
+figcaption,
+.image-caption {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-top: 8px;
+    color: var(--muted-text);
+}
+
+
+/* YOUTUBE VIDEO */
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    aspect-ratio: 16 / 9;
+    margin: 20px 0;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+/* ========================================
+   MOBILE RESPONSIVE DESIGN
+======================================== */
 
 @media (max-width: 700px) {
+
+    /* NAVIGATION */
+
+    nav {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+
+    /* HOMEPAGE COVER */
 
     .home-hero {
         padding: 30px 7% 40px;
@@ -542,26 +430,44 @@ figcaption {
         gap: 5px;
     }
 
-    .intro-section,
-    .explore-section {
-        grid-template-columns: 1fr;
+    .hero-title h1 {
+        font-size: clamp(42px, 11vw, 65px);
     }
 
+    .hero-small {
+        text-align: left;
+    }
+
+
+    /* HOMEPAGE INTRODUCTION */
+
     .intro-section {
+        grid-template-columns: 1fr;
         padding: 50px 7%;
         gap: 15px;
     }
 
+
+    /* COLOR BLOCKS */
+
+    .visual-elements {
+        padding: 45px 7%;
+    }
+
     .element-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .element-block {
         min-height: 190px;
+        padding: 20px 15px;
     }
 
-    .visual-elements {
-        padding: 45px 7%;
+
+    /* WEBSITE EXPLORATION */
+
+    .explore-section {
+        grid-template-columns: 1fr;
     }
 
     .explore-text {
@@ -572,8 +478,34 @@ figcaption {
         padding: 35px 7%;
     }
 
+
+    /* CLOSING */
+
     .home-ending {
         padding: 50px 7%;
     }
-}
 
+
+    /* MOVIES PAGE */
+
+    .movies-page {
+        padding: 0 15px;
+    }
+
+    .movie-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .movie-gallery img {
+        height: auto;
+    }
+
+    .featured-movie-image img {
+        height: auto;
+    }
+
+    .movie-section {
+        margin-bottom: 35px;
+        padding: 25px;
+    }
+}
